@@ -1,15 +1,16 @@
  html {
-     font-family: 'Helvetica Neue';
+     font-family:  "Times New Roman", serif;
  }
  
  body {
      margin: 0;
+     flex-direction: column;
  }
  
  header {
-     background: rgb(175, 225, 175);
+     background:  rgb(220, 204, 174);
      text-align: center;
-     height: max-content;
+     height: min-content;
      padding: 1em;
  }
  
@@ -18,13 +19,24 @@
      flex-direction: row;
      flex-wrap: wrap;
      height: 100vh;
+     flex: 1;
  }
  
+ #tablero div {
+    display: flex;
+    align-items: center;
+
+}
+  
  article {
-     flex: 1;
      border-width: 1px;
      border-style: solid;
-     padding: 1em;
+     padding: 1%;
+     margin: 1em;
+     text-align: center;
+     background-color: rgb(220, 204, 174);
+     flex: 1
+
  }
  
  article:nth-child(2) {
@@ -32,17 +44,81 @@
  }
  
  #tablero {
-     border-style: solid;
-     border-color: red;
      display: grid;
-     grid-template-columns: 1fr 2fr;
-     grid-template-rows: 2fr 10fr;
-     height: 75vh;
-     gap: 5px;
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows: 1fr 1fr 1fr;
+     height: 50%;
+
  }
  
- #tablero div {
-     border-style: solid;
-     margin: 10px;
-     padding: 5px;
+ #topLeft {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
  }
+
+ #topCenter {
+    border-bottom: 1px solid black;
+ }
+ #topRight{
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+ }
+ 
+ #centerLeft{
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+ }
+
+ #centercenter {
+    border-bottom: 1px solid black;
+ }
+
+ #centerRight {
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+ }
+
+ #bottomLeft {
+    border-right: 1px solid black;
+ }
+
+ #bottomRight{
+    border-left: 1px solid black;
+ }
+ 
+
+ #tablero div {
+     display: block;
+ }
+
+h1 {
+    border-top: 2px solid black;
+    padding-top: 1%;
+}
+
+p {
+    text-align: justify;
+    padding: 5%;
+}
+
+ table {
+   margin:auto
+}
+
+h2{
+    font-size: medium;
+    margin-top: 15%;
+}
+tr:nth-child(even) {
+    background-color: #eef7d5;
+  }
+
+img{
+  
+    align-items: center;
+    display: flex;
+    margin: auto;
+    max-width: 70%;
+    max-height: 80%;
+
+}
